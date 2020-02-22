@@ -1,11 +1,12 @@
 # ksqlDB UDF/UDAF
 
+This repository has the list of custom ksqlDB UDF/UDAF created by Entechlog.com to solve various real-life use cases.
 ---
 
 Table of Contents
 
 * <a href="#Requirements">Versions and Requirements</a>
-* <a href="#Examples">Examples</a>
+* <a href="#Index">Examples</a>
 * <a href="#License">License</a>
 
 ---
@@ -25,13 +26,13 @@ Requirements to locally build, test, package the UDF/UDAF examples:
 
 See my blog on this at [Entechlog](https://entechlog.com) for more details
 
-<a name="Examples"></a>
+<a name="Index"></a>
 
 # Examples
 
-| Example                                  | Type      | Description                                                |
+| Usage                                    | Type      | Description                                                |
 | ---------------------------------------- | --------- | -----------------------------------------------------------|
-| [`UDF_TOTITLECASE(col1)`]                | [UDF][5]  | Return capitalized version of first character in each word |
+| UDF_TOTITLECASE(col1)                    | UDF       | Return capitalized version of first character in each word |
 
 To package the UDFs/UDAFs ([details](https://docs.confluent.io/current/ksql/docs/developer-guide/implement-a-udf.html#build-the-udf-package)):
 
@@ -41,6 +42,8 @@ You can verify that the UDFs/UDAFs are available for use by running `SHOW FUNCTI
 any specific function with `DESCRIBE FUNCTION <name>`.
 
 To use the UDFs/UDAFs in KSQL
+
+## UDF_TOTITLECASE
 
 ```sql
 

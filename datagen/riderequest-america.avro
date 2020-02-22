@@ -1,0 +1,88 @@
+{
+  "namespace": "streams",
+  "name": "riderequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "requesttime",
+      "type": {
+        "type": "long",
+        "format_as_time": "unix_long",
+        "arg.properties": {
+          "iteration": {
+            "start": 1,
+            "step": 10
+          }
+        }
+      }
+    },
+    {
+      "name": "latitude",
+      "type": {
+        "type": "double",
+        "arg.properties": {
+          "range": {"min": 37.7 , "max": 45.0}
+        }
+      }
+    },     
+    {
+      "name": "longitude",
+      "type": {
+        "type": "double",
+        "arg.properties": {
+          "range": {"min": -122.0, "max": -100.0}
+        }
+      }
+    },    
+    {
+      "name": "rideid",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "regex": "ride_[1-9][0-9][0-9]"
+        }
+      }
+    },
+    {
+      "name": "user",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "Judy",
+            "Mike",
+            "Niaj",
+            "Oscar",
+            "Peggy",
+            "Sybil",
+            "Ted",
+            "Trudy",
+            "Walter",
+            "Wendy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "city_name",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "Seattle",
+            "San Francisco",
+            "San Francisco",
+            "San Francisco",
+            "San Francisco",
+            "San Francisco",
+            "San Francisco",
+            "San Jose",
+            "Fresno",
+            "Los Angeles",
+            "San Diego"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+	"namespace": "streams",
+	"name": "user",
+	"type": "record",
+	"fields": [
+		{
+			"name": "userid",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"iteration": {
+						"start": 1000,
+						"step": 1
+					}
+				}
+			}
+		},
+		{
+			"name": "fullname",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"hassan gould",
+						"cristobal moreno",
+						"erasmo wiggins",
+						"berta dougherty",
+						"brice schneider",
+						"agustin waters",
+						"jodie beck",
+						"brandie bridges",
+						"gregg maynard jr.",
+						"roxie cochran",
+						"corina sharp",
+						"augustus fuentes",
+						"travis lozano",
+						"al scott",
+						"bruno ponce",
+						"kris adkins sr.",
+						"willie thomas mccann",
+						"marcella dawson",
+						"socorro horton",
+						"domingo graves",
+						"colby georgina, gilbert",
+						"tameka velasquez",
+						"quentin sexton",
+						"blair, clelia knox",
+						"maritza robles"
+					]
+				}
+			}
+		},
+		{
+			"name": "firstname",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"Hassan",
+						"Cristobal",
+						"Erasmo",
+						"Berta",
+						"Brice",
+						"Agustin",
+						"Jodie",
+						"Brandie",
+						"Gregg",
+						"Roxie",
+						"Corina",
+						"Augustus",
+						"Travis",
+						"Al",
+						"Bruno",
+						"Kris",
+						"Willie",
+						"Marcella",
+						"Socorro",
+						"Domingo",
+						"Colby",
+						"Tameka",
+						"Quentin",
+						"Blair",
+						"Maritza"
+					]
+				}
+			}
+		},
+		{
+			"name": "lastname",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"Gould",
+						"Moreno",
+						"Wiggins",
+						"Dougherty",
+						"Schneider",
+						"Waters",
+						"Beck",
+						"Bridges",
+						"Maynard",
+						"Cochran",
+						"Sharp",
+						"Fuentes",
+						"Lozano",
+						"Scott",
+						"Ponce",
+						"Adkins",
+						"Mccann",
+						"Dawson",
+						"Horton",
+						"Graves",
+						"Gilbert",
+						"Velasquez",
+						"Sexton",
+						"Knox",
+						"Robles"
+					]
+				}
+			}
+		},
+		{
+			"name": "countrycode",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"AU",
+						"IN",
+						"UK",
+						"US"
+					]
+				}
+			}
+		}
+	]
+}

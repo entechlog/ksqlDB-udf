@@ -28,7 +28,7 @@ See my blog on this at [Entechlog](https://entechlog.com) for more details
 
 <a name="UDF Index"></a>
 
-# Examples
+# UDF Index
 
 | Usage                                    | Type      | Description                                                |
 | ---------------------------------------- | --------- | -----------------------------------------------------------|
@@ -47,7 +47,7 @@ To use the UDFs/UDAFs in KSQL
 
 ```sql
 
-SELECT UDF_TOTITLECASE(C1) FROM TABLE;
+SELECT C1, UDF_TOTITLECASE(C1) FROM T1;
 ```
 
 <a name="License"></a>

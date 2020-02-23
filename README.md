@@ -6,7 +6,7 @@ This repository has the list of custom ksqlDB UDF/UDAF created by Entechlog.com 
 Table of Contents
 
 * <a href="#Requirements">Versions and Requirements</a>
-* <a href="#UDF Index">UDF Index</a>
+* <a href="#ksqlDB UDF's">ksqlDB UDF's</a>
 * <a href="#License">License</a>
 
 ---
@@ -26,13 +26,14 @@ Requirements to locally build, test, package the UDF/UDAF examples:
 
 See my blog on this at [Entechlog](https://entechlog.com) for more details
 
-<a name="UDF Index"></a>
+<a name="ksqlDB UDF's"></a>
 
-# UDF Index
+# ksqlDB UDF's
 
-| Usage                                    | Type      | Description                                                |
-| ---------------------------------------- | --------- | -----------------------------------------------------------|
-| UDF_TOTITLECASE(col1)                    | UDF       | Return capitalized version of first character in each word |
+| Usage                                    | Type      | Description                                                   |
+| ---------------------------------------- | --------- | --------------------------------------------------------------|
+| UDF_TOTITLECASE(col1)                    | UDF       | Return capitalized version of first character in each word    |
+| UDF_EXTRACTNAME(col1,'lastName')         | UDF       | Returns firstName, middleName, lastName, suffix from fullName |
 
 To package the UDFs/UDAFs ([details](https://docs.confluent.io/current/ksql/docs/developer-guide/implement-a-udf.html#build-the-udf-package)):
 
@@ -48,6 +49,13 @@ To use the UDFs/UDAFs in KSQL
 ```sql
 
 SELECT C1, UDF_TOTITLECASE(C1) FROM T1;
+```
+
+## UDF_EXTRACTNAME
+
+```sql
+
+SELECT C1, UDF_TOTITLECASE(C1,'firstName'), UDF_TOTITLECASE(C1,'lastName') FROM T1;
 ```
 
 <a name="License"></a>

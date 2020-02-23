@@ -17,94 +17,103 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.entechlog.ksql.functions</groupId>
-    <artifactId>udf-ToTitleCase</artifactId>
-    <version>0.1.0</version>
-    <packaging>jar</packaging>
+	<groupId>com.entechlog.ksql.functions</groupId>
+	<artifactId>entechlog-ksqlDB-udf</artifactId>
+	<version>0.1.01</version>
+	<packaging>jar</packaging>
 
-    <name>KSQL UDF / UDAF Quickstart</name>
+	<name>KSQL UDF / UDAF </name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <ksql.version>5.4.0</ksql.version>
-        <junit.jupiter.version>5.4.1</junit.jupiter.version>
-        <maven.shade.version>3.2.1</maven.shade.version>
-        <!-- JUnit 5 requires Surefire version 2.22.1 or higher -->
-        <maven.surefire.version>2.22.1</maven.surefire.version>
-    </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<ksql.version>5.4.0</ksql.version>
+		<junit.jupiter.version>5.4.1</junit.jupiter.version>
+		<maven.shade.version>3.2.1</maven.shade.version>
+		<apache.commons.version>3.9</apache.commons.version>
+		<!-- JUnit 5 requires Surefire version 2.22.1 or higher -->
+		<maven.surefire.version>2.22.1</maven.surefire.version>
+	</properties>
 
-    <repositories>
-        <repository>
-            <id>confluent</id>
-            <url>http://packages.confluent.io/maven/</url>
-        </repository>
-        <repository>
-            <id>ossrh</id>
-            <name>Maven Central</name>
-            <url>https://repo1.maven.org/maven2/</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>confluent</id>
+			<url>http://packages.confluent.io/maven/</url>
+		</repository>
+		<repository>
+			<id>ossrh</id>
+			<name>Maven Central</name>
+			<url>https://repo1.maven.org/maven2/</url>
+		</repository>
+	</repositories>
 
-    <!--
+	<!--
         Execute "mvn clean package"
         to build a jar file out of this project!
     -->
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <configuration>
-                    <compilerArgs>
-                        <arg>-Xlint:all</arg>
-                        <arg>-Werror</arg>
-                    </compilerArgs>
-                    <showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>${maven.shade.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.version}</version>
-            </plugin>
-        </plugins>
-    </build>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<compilerArgs>
+						<arg>-Xlint:all</arg>
+						<arg>-Werror</arg>
+					</compilerArgs>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+					<source>1.8</source>
+					<target>1.8</target>
+					<compilerArgs>
+						<arg>-parameters</arg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>${maven.shade.version}</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.version}</version>
+			</plugin>
+		</plugins>
+	</build>
 
-    <dependencies>
-        <!-- KSQL dependencies -->
-        <dependency>
-            <groupId>io.confluent.ksql</groupId>
-            <artifactId>ksql-udf</artifactId>
-            <version>${ksql.version}</version>
-        </dependency>
-        <!-- Test dependencies -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>${junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+	<dependencies>
+		<!-- KSQL dependencies -->
+		<dependency>
+			<groupId>io.confluent.ksql</groupId>
+			<artifactId>ksql-udf</artifactId>
+			<version>${ksql.version}</version>
+		</dependency>
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${apache.commons.version}</version>
+		</dependency>
+	</dependencies>
+
 </project>

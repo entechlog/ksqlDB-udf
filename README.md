@@ -6,7 +6,7 @@ This repository has the list of custom ksqlDB UDF/UDAF created by Entechlog.com 
 Table of Contents
 
 * <a href="#Requirements">Versions and Requirements</a>
-* <a href="#Index">Examples</a>
+* <a href="#UDF Index">UDF Index</a>
 * <a href="#License">License</a>
 
 ---
@@ -26,7 +26,7 @@ Requirements to locally build, test, package the UDF/UDAF examples:
 
 See my blog on this at [Entechlog](https://entechlog.com) for more details
 
-<a name="Index"></a>
+<a name="UDF Index"></a>
 
 # Examples
 

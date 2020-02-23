@@ -24,16 +24,16 @@ Requirements to locally build, test, package the UDF/UDAF examples:
 * Java 8+
 * Maven 3.6+
 
-See my blog on this at [Entechlog](https://entechlog.com) for more details
+See my blog on how to create UDF's at [Entechlog](https://www.entechlog.com/2020/02/how-to-create-and-validate-ksqldb-udfs.html) for more details
 
 <a name="ksqlDB UDF's"></a>
 
 # ksqlDB UDF's
 
-| Usage                                    | Type      | Description                                                   |
-| ---------------------------------------- | --------- | --------------------------------------------------------------|
-| UDF_TOTITLECASE(col1)                    | UDF       | Return capitalized version of first character in each word    |
-| UDF_EXTRACTNAME(col1,'lastName')         | UDF       | Returns firstName, middleName, lastName, suffix from fullName |
+| Usage                                    | Type      | Description                                                   | Demo URL |
+| ---------------------------------------- | --------- | --------------------------------------------------------------|----------|
+| UDF_TOTITLECASE(col1)                    | UDF       | Return capitalized version of first character in each word    | [Demo](https://asciinema.org/a/8lXP671qZk85XGNbCYZyOsHDh) |
+| UDF_EXTRACTNAME(col1,'lastName')         | UDF       | Returns firstName, middleName, lastName, suffix from fullName | [Demo](https://asciinema.org/a/5qhuIBWLQahEsl3WBexFIfcnX) |
 
 To package the UDFs/UDAFs ([details](https://docs.confluent.io/current/ksql/docs/developer-guide/implement-a-udf.html#build-the-udf-package)):
 

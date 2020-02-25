@@ -1,0 +1,118 @@
+{
+	"namespace": "streams",
+	"name": "user",
+	"type": "record",
+	"fields": [
+		{
+			"name": "userid",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"iteration": {
+						"start": 1000,
+						"step": 1
+					}
+				}
+			}
+		},
+		{
+			"name": "fullname",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"$*^#hassan &%gould",
+						"cri)#$@stobal mo*%$%reno",
+						"era)&^smo wigg@%@!ins",
+						"berta dougherty",
+						"br@#^ice schn)@!!eider"
+					]
+				}
+			}
+		},
+		{
+			"name": "firstname",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"Hassan",
+						"Cristobal",
+						"Erasmo",
+						"Berta",
+						"Brice",
+						"Agustin",
+						"Jodie",
+						"Brandie",
+						"Gregg",
+						"Roxie",
+						"Corina",
+						"Augustus",
+						"Travis",
+						"Al",
+						"Bruno",
+						"Kris",
+						"Willie",
+						"Marcella",
+						"Socorro",
+						"Domingo",
+						"Colby",
+						"Tameka",
+						"Quentin",
+						"Blair",
+						"Maritza"
+					]
+				}
+			}
+		},
+		{
+			"name": "lastname",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"Gould",
+						"Moreno",
+						"Wiggins",
+						"Dougherty",
+						"Schneider",
+						"Waters",
+						"Beck",
+						"Bridges",
+						"Maynard",
+						"Cochran",
+						"Sharp",
+						"Fuentes",
+						"Lozano",
+						"Scott",
+						"Ponce",
+						"Adkins",
+						"Mccann",
+						"Dawson",
+						"Horton",
+						"Graves",
+						"Gilbert",
+						"Velasquez",
+						"Sexton",
+						"Knox",
+						"Robles"
+					]
+				}
+			}
+		},
+		{
+			"name": "countrycode",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"AU",
+						"IN",
+						"UK",
+						"US"
+					]
+				}
+			}
+		}
+	]
+}

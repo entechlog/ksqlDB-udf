@@ -29,13 +29,12 @@ See my blog on how to create UDF's at [Entechlog](https://www.entechlog.com/2020
 <a name="ksqlDB UDF's"></a>
 
 # ksqlDB UDF's
-
-| Usage                                      | Type      | Description                                                   | Demo URL |
-| ---------------------------------------- --| --------- | --------------------------------------------------------------|----------|
-| UDF_TOTITLECASE(col1)                      | UDF       | Return capitalized version of first character in each word    | [Demo](https://asciinema.org/a/8lXP671qZk85XGNbCYZyOsHDh) |
-| UDF_EXTRACTNAME(col1,'lastName')           | UDF       | Returns firstName, middleName, lastName, suffix from fullName | [Demo](https://asciinema.org/a/5qhuIBWLQahEsl3WBexFIfcnX) |
-| UDF_DS_CURRENTDATE()                       | UDF       | Returns current date in YYYY-MM-DD format                     | [Demo](https://asciinema.org/a/24q9DZ3ufc0aFZBHMLtVr2mYd) |
-| UDF_REPLACEALL(col1,'regex','replacement') | UDF       | Calls Java String ReplaceAll                                  | [Demo](https://asciinema.org/a/USrMytLDR5TWdS6QP5FrGwSvt) |
+|Usage   									|Type   |Description   												  	|Demo URL	|
+|-------------------------------------------|-------|---------------------------------------------------------------|-----------|
+|UDF_TOTITLECASE(col1)   					|UDF    |Return capitalized version of first character in each word   	| [Demo](https://asciinema.org/a/8lXP671qZk85XGNbCYZyOsHDh) |
+|UDF_EXTRACTNAME(col1,'lastName')   		|UDF   	|Returns firstName, middleName, lastName, suffix from fullName  | [Demo](https://asciinema.org/a/5qhuIBWLQahEsl3WBexFIfcnX) |
+|UDF_DS_CURRENTDATE()   					|UDF   	|Returns current date in YYYY-MM-DD format   					| [Demo](https://asciinema.org/a/24q9DZ3ufc0aFZBHMLtVr2mYd) |
+|UDF_REPLACEALL(col1,'regex','replacement') |UDF   	|Calls Java String ReplaceAll   								| [Demo](https://asciinema.org/a/USrMytLDR5TWdS6QP5FrGwSvt) |
 
 To package the UDFs/UDAFs ([details](https://docs.confluent.io/current/ksql/docs/developer-guide/implement-a-udf.html#build-the-udf-package)):
 

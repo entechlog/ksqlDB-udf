@@ -1,0 +1,78 @@
+{
+	"namespace": "streams",
+	"name": "orders",
+	"type": "record",
+	"fields": [
+		{
+			"name": "orderID",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"iteration": {
+						"start": 800000,
+						"step": -1,
+						"restart": 1
+					}
+				}
+			}
+		},
+		{
+			"name": "CustomerID",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"5759544343400808",
+						"8484214343400844",
+						"6454214343400548"
+					]
+				}
+			}
+		},
+		{
+			"name": "StorePickUpFlag",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"Yes",
+						"No"
+					]
+				}
+			}
+		},
+		{
+			"name": "ItemName",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"Tile Mate Item Finder 4-Pack Combo",
+						"Samsung Evo Select MicroSD card and adapter",
+						"Jelly Comb folding Bluetooth keyboard",
+						"Apple iPad",
+						"Nintendo Switch",
+						"Arlo Pro",
+						"NVIDIA Shield Pro",
+						"Amazon Fire TV Stick 4K Streaming Player",
+						"GoPro HERO8 Black Action Camera",
+						"Apple TV 4K Streaming Console"
+					]
+				}
+			}
+		},
+		{
+			"name": "OrderDate",
+			"type": {
+				"type": "string",
+				"arg.properties": {
+					"options": [
+						"09/01/2018",
+						"06/24/2019",
+						"01/28/2020"
+					]
+				}
+			}
+		}
+	]
+}

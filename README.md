@@ -35,6 +35,8 @@ See my blog on how to create UDF's at [Entechlog](https://www.entechlog.com/2020
 |UDF_EXTRACTNAME(col1,'lastName')   		|UDF   	|Returns firstName, middleName, lastName, suffix from fullName  | [Demo](https://asciinema.org/a/5qhuIBWLQahEsl3WBexFIfcnX) |
 |UDF_DS_CURRENTDATE()   					|UDF   	|Returns current date in YYYY-MM-DD format   					| [Demo](https://asciinema.org/a/24q9DZ3ufc0aFZBHMLtVr2mYd) |
 |UDF_REPLACEALL(col1,'regex','replacement') |UDF   	|Calls Java String ReplaceAll   								| [Demo](https://asciinema.org/a/USrMytLDR5TWdS6QP5FrGwSvt) |
+|UDF_TEXTTOHEX(col1)                        |UDF    |Converts TEXT to HEX                                           | [Demo](https://asciinema.org/a/rkQLi4e3paS94Zbp4ksQ9D99A) |
+|UDF_HEXTOTEXT(col1)                        |UDF    |Converts HEX to TEXT                                           | [Demo](https://asciinema.org/a/rkQLi4e3paS94Zbp4ksQ9D99A) |
 
 To package the UDFs/UDAFs ([details](https://docs.confluent.io/current/ksql/docs/developer-guide/implement-a-udf.html#build-the-udf-package)):
 
@@ -67,6 +69,18 @@ SELECT USERID, UDF_DS_CURRENTDATE() FROM STM_DATAGEN_USER_SRC_0010 EMIT CHANGES;
 
 ```sql
 SELECT USERID, FULLNAME, UDF_REPLACEALL(FULLNAME, '[^A-ZA-Z0-9\\S]', '') FROM STM_DATAGEN_USER_SRC_0010 EMIT CHANGES;
+```
+
+## UDF_TEXTTOHEX
+
+```sql
+SELECT UDF_TEXTTOHEX(DEPT_NAME), UDF_HEXTOTEXT(UDF_TEXTTOHEX(DEPT_NAME)),* FROM TBL_DEPARTMENTS_01 EMIT CHANGES;
+```
+
+## UDF_HEXTOTEXT
+
+```sql
+SELECT UDF_TEXTTOHEX(DEPT_NAME), UDF_HEXTOTEXT(UDF_TEXTTOHEX(DEPT_NAME)),* FROM TBL_DEPARTMENTS_01 EMIT CHANGES;
 ```
 
 <a name="License"></a>

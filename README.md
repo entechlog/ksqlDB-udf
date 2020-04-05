@@ -37,6 +37,7 @@ See my blog on how to create UDF's at [Entechlog](https://www.entechlog.com/2020
 |UDF_REPLACEALL(col1,'regex','replacement') |UDF   	|Calls Java String ReplaceAll   								| [Demo](https://asciinema.org/a/USrMytLDR5TWdS6QP5FrGwSvt) |
 |UDF_TEXTTOHEX(col1)                        |UDF    |Converts TEXT to HEX                                           | [Demo](https://asciinema.org/a/rkQLi4e3paS94Zbp4ksQ9D99A) |
 |UDF_HEXTOTEXT(col1)                        |UDF    |Converts HEX to TEXT                                           | [Demo](https://asciinema.org/a/rkQLi4e3paS94Zbp4ksQ9D99A) |
+|UDF_FILTERARRAYLIST(col1,start,end)                |UDF    |Creates a subset of array based on start and end                                           | [Demo](https://asciinema.org/a/VRWZUSnZIDNwB7LyH4VY8A2EK) |
 
 To package the UDFs/UDAFs ([details](https://docs.confluent.io/current/ksql/docs/developer-guide/implement-a-udf.html#build-the-udf-package)):
 
@@ -81,6 +82,13 @@ SELECT UDF_TEXTTOHEX(DEPT_NAME), UDF_HEXTOTEXT(UDF_TEXTTOHEX(DEPT_NAME)),* FROM 
 
 ```sql
 SELECT UDF_TEXTTOHEX(DEPT_NAME), UDF_HEXTOTEXT(UDF_TEXTTOHEX(DEPT_NAME)),* FROM TBL_DEPARTMENTS_01 EMIT CHANGES;
+```
+
+## UDF_FILTERARRAYLIST
+
+```sql
+SELECT CUSTOMERID, ORDERDATA, UDF_FILTERARRAYLIST(ORDERDATA, 3, 4)
+FROM STM_ARRAY_DEMO_0030 EMIT CHANGES;
 ```
 
 <a name="License"></a>

@@ -71,6 +71,11 @@
 					<compilerArgs>
 						<arg>-parameters</arg>
 					</compilerArgs>
+					<excludes>
+						<exclude>com/entechlog/ksql/functions/Udf_DS_DateToString.java</exclude>
+						<exclude>com/entechlog/ksql/functions/Udf_DS_StringToDate.java</exclude>
+						<exclude>com/entechlog/ksql/functions/Udf_FilterArray.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 			<plugin>

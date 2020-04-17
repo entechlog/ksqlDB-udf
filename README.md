@@ -39,6 +39,7 @@ See my blog on how to create UDF's at [Entechlog](https://www.entechlog.com/2020
 |UDF_HEXTOTEXT(col1)                        |UDF    |Converts HEX to TEXT                                           | [Demo](https://asciinema.org/a/rkQLi4e3paS94Zbp4ksQ9D99A) |
 |UDF_FILTERARRAYLIST(col1,start,end)                |UDF    |Creates a subset of array based on start and end                                           | [Demo](https://asciinema.org/a/VRWZUSnZIDNwB7LyH4VY8A2EK) |
 |UDF_SORTARRAY(col1,'DESC')                |UDF    |Sorts list/array based on sort order                                           | [Demo] |
+|UDF_CALCULATE_ENDDATE(col1)                |UDF    |Timeslices the array of dates and assigns an end date| [Demo] |
 
 To package the UDFs/UDAFs ([details](https://docs.confluent.io/current/ksql/docs/developer-guide/implement-a-udf.html#build-the-udf-package)):
 

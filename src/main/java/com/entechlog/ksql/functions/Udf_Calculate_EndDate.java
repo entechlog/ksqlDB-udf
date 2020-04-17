@@ -33,7 +33,7 @@ public class Udf_Calculate_EndDate {
                 outputArrayList.add(previous_day);
             } catch (Exception e) {}
         }
-        outputArrayList.add("99991201");
+        outputArrayList.add("99991231");
         Collections.sort(outputArrayList);
         return outputArrayList;
 

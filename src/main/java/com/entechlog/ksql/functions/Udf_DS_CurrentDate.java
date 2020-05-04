@@ -20,7 +20,6 @@ public class Udf_DS_CurrentDate {
   @Udf(description = "Returns the current date in YYYY-MM-DD format")
   
   public String udf_DS_CurrentDate() {
-    return ((String) LocalDate.now().toString());
+    return (LocalDate.now().toString());
   }
-
 }

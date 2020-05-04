@@ -11,3 +11,5 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 src/main/java/com/entechlog/ksql/functions/Udf_DS_StringToDate.java
 src/main/java/com/entechlog/ksql/functions/Udf_FilterArray.java
+.idea/
+entechlog-ksqlDB-udf.iml

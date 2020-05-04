@@ -4,7 +4,6 @@ This repository has the list of custom ksqlDB UDF/UDAF created by Entechlog.com 
 ---
 
 Table of Contents
-
 * <a href="#Requirements">Versions and Requirements</a>
 * <a href="#ksqlDB UDF's">ksqlDB UDF's</a>
 * <a href="#License">License</a>

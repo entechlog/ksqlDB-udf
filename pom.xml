@@ -21,7 +21,7 @@
 
 	<groupId>com.entechlog.ksql.functions</groupId>
 	<artifactId>entechlog-ksqlDB-udf</artifactId>
-	<version>0.1.02</version>
+	<version>0.1.03</version>
 	<packaging>jar</packaging>
 
 	<name>KSQL UDF / UDAF </name>
@@ -69,7 +69,6 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<compilerArgs>
-						<arg>-parameters</arg>
 					</compilerArgs>
 					<excludes>
 						<exclude>com/entechlog/ksql/functions/Udf_DS_DateToString.java</exclude>

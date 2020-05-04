@@ -21,7 +21,7 @@
 
 	<groupId>com.entechlog.ksql.functions</groupId>
 	<artifactId>entechlog-ksqlDB-udf</artifactId>
-	<version>0.1.03</version>
+	<version>0.1.04</version>
 	<packaging>jar</packaging>
 
 	<name>KSQL UDF / UDAF </name>

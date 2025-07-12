@@ -31,7 +31,7 @@
 		<ksql.version>5.4.0</ksql.version>
 		<junit.jupiter.version>5.4.1</junit.jupiter.version>
 		<maven.shade.version>3.2.1</maven.shade.version>
-		<apache.commons.version>3.9</apache.commons.version>
+		<apache.commons.version>3.18.0</apache.commons.version>
 		<!-- JUnit 5 requires Surefire version 2.22.1 or higher -->
 		<maven.surefire.version>2.22.1</maven.surefire.version>
 	</properties>
